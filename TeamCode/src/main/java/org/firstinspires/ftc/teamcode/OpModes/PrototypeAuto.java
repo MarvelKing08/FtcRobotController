@@ -44,8 +44,9 @@ public class PrototypeAuto extends NextFTCOpMode {
 //                )
         );
 
+        // insert pedropathing code here
 
-        // pedropathing code
+
     }
 
     @Override
