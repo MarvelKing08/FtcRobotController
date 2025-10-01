@@ -1,20 +1,22 @@
-package OpModes;
+package org.firstinspires.ftc.teamcode.OpModes;
 
-
-import androidx.annotation.NonNull;
 
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import OpModes.subsystems.Claw;
-import OpModes.subsystems.Lift;
+import org.firstinspires.ftc.teamcode.OpModes.subsystems.Claw;
+import org.firstinspires.ftc.teamcode.OpModes.subsystems.Lift;
 import dev.nextftc.core.commands.Command;
 import dev.nextftc.core.components.BindingsComponent;
 import dev.nextftc.core.components.SubsystemComponent;
+import dev.nextftc.extensions.pedro.PedroComponent;
 import dev.nextftc.ftc.Gamepads;
 import dev.nextftc.ftc.NextFTCOpMode;
 import dev.nextftc.ftc.components.BulkReadComponent;
 import dev.nextftc.hardware.driving.MecanumDriverControlled;
 import dev.nextftc.hardware.impl.MotorEx;
+
+// at the top of the file:
+
 
 @TeleOp
 public class PrototypeTeleOp extends NextFTCOpMode {
@@ -26,11 +28,14 @@ public class PrototypeTeleOp extends NextFTCOpMode {
         );
     }
 
+
     // change the names and directions to suit your robot
     private final MotorEx frontLeftMotor = new MotorEx("leftFront");
     private final MotorEx frontRightMotor = new MotorEx("rightFront").reversed();
     private final MotorEx backLeftMotor = new MotorEx("leftRear");
     private final MotorEx backRightMotor = new MotorEx("rightRear").reversed();
+
+    private final MotorEx turret = new MotorEx("turret");
 
     @Override
 
@@ -72,4 +77,5 @@ public class PrototypeTeleOp extends NextFTCOpMode {
 //    public Object MotorEx(@NotNull String s) {
 //        return null;
 //    }
+
 }
