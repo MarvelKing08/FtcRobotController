@@ -28,7 +28,7 @@ public class turretTest extends LinearOpMode {
 
         telemetry.setMsTransmissionInterval(11);
 
-        limelight.pipelineSwitch(0);
+        limelight.pipelineSwitch(7);
 
         /*
          * Starts polling for data.  If you neglect to call start(), getLatestResult() will return null.
@@ -47,6 +47,7 @@ public class turretTest extends LinearOpMode {
             LLResult result = limelight.getLatestResult();
             double tx = result.getTx();
 
+            motor.setPower(PIDController.calculate(0, tx));
             if (result.isValid()) {
 
 
